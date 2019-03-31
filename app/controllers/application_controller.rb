@@ -21,11 +21,6 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   
-  get '/articles/new' do 
-    @article = Aritcle.new
-    erb :new 
-  end
-  
   post '/articles' do 
     @article = Article.create(params)
   end
